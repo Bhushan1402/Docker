@@ -15,7 +15,7 @@ pipeline {
 			steps {
 				sh ''' #! /bin/bash
 				ssh -i /var/lib/jenkins/.ssh/id_rsa root@18.217.180.181 '
-				cd newChatapp/
+				cd pipelinechatapp/
 				#docker-compose down 
 				docker stop $(docker ps -a -q)
 				docker rm $(docker ps -a -q)
