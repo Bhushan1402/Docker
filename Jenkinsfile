@@ -30,18 +30,7 @@ pipeline {
 				'''
 			}
 		}
-		stage('Push Image') {
-			steps { 
-				sh ''' #! /bin/bash
-				ssh -i /var/lib/jenkins/.ssh/id_rsa root@52.66.240.187 '
-				docker tag pipelinechatapp_chatapp bhushan1402/chatapp
-				docker push bhushan1402/chatapp
-				#docker tag chat:latest 760496128264.dkr.ecr.ap-south-1.amazonaws.com/chatapp:chat
-				#docker push 760496128264.dkr.ecr.ap-south-1.amazonaws.com/chatapp:chat
-				'
-				'''
-			}
-		}
+		
 	}
 	post {
 		always {
