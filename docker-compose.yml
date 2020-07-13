@@ -6,8 +6,8 @@ services:
        context: ./database/
     volumes:
       - db_volume:/var/lib/postgresql/data
-    hostname: db
-    container_name: db
+    hostname: database
+    container_name: database
     ports:
      - "5432:5432"
     environment:
