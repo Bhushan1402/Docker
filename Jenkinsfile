@@ -19,13 +19,8 @@ pipeline {
 				#docker-compose down 
 				docker stop $(docker ps -a -q)
 				docker rm $(docker ps -a -q)
-				docker rmi -f pipelinechatapp_chatapp:latest bhushan1402/chatapp
-				#docker rmi -f pipelinechatapp_db:latest bhushan1402/chatappdb
-				#docker rmi -f pipelinechatapp_nginx:latest bhushan1402/chatappnginx
+				docker rmi -f pipelinechatapp_chatapp:latest 
 				docker-compose up -d
-				#docker stop chatapplication
-				#docker rm chatapplication
-				#docker build -t chat .
 				'
 				'''
 			}
